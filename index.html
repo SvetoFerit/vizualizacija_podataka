@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tactics Board</title>
+    <meta charset="utf-8" />
+
+ <script src="http://d3js.org/d3.v3.js"></script>
+
+
+<h1> Nogomet (LaLiga)</h1>
+
+
+<style>
+#tooltip {
+        position: absolute;
+        margin-left: 500px;
+  margin-top:100px;
+        width: 150px;
+        height: auto;
+        padding: 5px;
+        background-color: white;
+		opacity: 0.8;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
+        box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
+        pointer-events: none;
+}
+
+#tooltip.hidden {
+        display: none;
+}
+
+#tooltip p {
+        margin: 0;
+        font-family: sans-serif;
+        font-size: 12px;
+        line-height: 16px;
+}
+
+.dot circle {
+  stroke-width: 4px;
+}
+
+#field{
+  margin-left: 500px;
+  margin-top:100px;
+
+}
+
+</style>
+
+</head>
+
+
+<body>   
+  <div id="options" style="margin-bottom: 50px"></div> 
+    <div id="tooltip" class="hidden">
+        <p><strong>Player Detail</strong></p>
+        <p>Name: <span id="name">100</span></p>
+		<p>Number: <span id="number">100</span></p>
+		<p>Position: <span id="pos">100</span></p>
+</div>
+
+<div id="field"></div>
+
+<script type="text/javascript">
+var scaleh = d3.scale.linear();
+var scalev = d3.scale.linear();
+
+var width = 1150,height = 720;
+
+var holder = d3.select("#field") // select the 'body' element
+      .append("svg")           // append an SVG element to the body
+      .attr("width", 1000)      
+      .attr("height", 600)         // position the left of the rectangle
+  
+// draw a rectangle - pitch
+holder.append("rect")        // attach a rectangle
+    .attr("x", 0)         // position the left of the rectangle
+    .attr("y", 0)          // position the top of the rectangle
+    .attr("height", 500)    // set the height
+    .attr("width", 1000)    // set the width
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+// draw a rectangle - halves
+holder.append("rect")        // attach a rectangle
+    .attr("x", 0)         // position the left of the rectangle
+    .attr("y", 0)          // position the top of the rectangle
+    .attr("height", 500)    // set the height
+    .attr("width", 500)    // set the width
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+// draw a circle - center circle
+holder.append("circle")          // attach a circle
+    .attr("cx", 500)             // position the x-centre
+    .attr("cy", 250)             // position the y-centre
+    .attr("r", 50)               // set the radius
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")      // set the line colour
+    .style("fill", "none");      // set the fill colour
+// draw a rectangle - penalty area 1
+holder.append("rect")        // attach a rectangle
+    .attr("x", 0)         // position the left of the rectangle
+    .attr("y", 105)          // position the top of the rectangle
+    .attr("height", 290)    // set the height
+    .attr("width", 170)    // set the width
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+// draw a rectangle - penalty area 2
+holder.append("rect")        // attach a rectangle
+    .attr("x", 830)         // position the left of the rectangle
+    .attr("y", 105)          // position the top of the rectangle
+    .attr("height", 290)    // set the height
+    .attr("width", 170)    // set the width
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+// draw a rectangle - six yard box 1
+holder.append("rect")        // attach a rectangle
+    .attr("x", 0)         // position the left of the rectangle
+    .attr("y", 184)          // position the top of the rectangle
+    .attr("height", 132)    // set the height
+    .attr("width", 60)    // set the width
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+// draw a rectangle - six yard box 2
+holder.append("rect")        // attach a rectangle
+    .attr("x", 940)         // position the left of the rectangle
+    .attr("y", 184)          // position the top of the rectangle
+    .attr("height", 132)    // set the height
+    .attr("width", 60)    // set the width
+    .style("stroke-width", 5)    // set the stroke width
+    .style("stroke", "#001400")    // set the line colour
+    .style("fill", "#80B280");    // set the fill colour 
+// draw a circle - penalty spot 1
+holder.append("circle")        // attach a circle
+    .attr("cx", 120)           // position the x-centre
+    .attr("cy", 250)           // position the y-centre
+    .attr("r", 5)             // set the radius
+    .style("fill", "#001400");     // set the fill colour
+// draw a circle - penalty spot 2
+holder.append("circle")        // attach a circle
+    .attr("cx", 880)           // position the x-centre
+    .attr("cy", 250)           // position the y-centre
+    .attr("r", 5)             // set the radius
+    .style("fill", "#001400");     // set the fill colour
+// draw a circle - center spot
+holder.append("circle")        // attach a circle
+    .attr("cx", 500)           // position the x-centre
+    .attr("cy", 250)           // position the y-centre
+    .attr("r", 5)             // set the radius
+    .style("fill", "#001400");     // set the fill colour
+// penalty box semi-circle 1
+var vis = d3.select("body").append("svg")
+var pi = Math.PI;
+    
+var arc = d3.svg.arc()
+    .innerRadius(70)
+    .outerRadius(75)
+    .startAngle(0.75) //radians
+    .endAngle(2.4) //just radians
+    
+var arc2 = d3.svg.arc()
+    .innerRadius(70)
+    .outerRadius(75)
+    .startAngle(-0.75) //radians
+    .endAngle(-2.4) //just radians
+    holder.append("path")
+    .attr("d", arc)
+    .attr("fill", "#001400")
+    .attr("transform", "translate(120,250)");
+    holder.append("path")
+    .attr("d", arc2)
+    .attr("fill", "#001400")
+    .attr("transform", "translate(880,250)");
+// Dragging circles
+var color = d3.scale.ordinal().range(["maroon", "pink"]);
+var color1 = d3.scale.ordinal().range(["mediumturquoise", "red"]);
+//var color = d3.scale.category10();
+var drag = d3.behavior.drag()
+    .origin(function(d) { return d; })
+    .on("dragstart", dragstarted)
+    .on("drag", dragged)
+    .on("dragend", dragended);
+
+    scaleh.domain([0, width]);
+	scaleh.range([0, 1268]);
+	scalev.domain([0, height]);
+	scalev.range([0, 808]);
+
+
+
+d3.json("data.json", function(error, data) {
+  var options=d3.values(data);
+  console.log(options)
+
+  var select = d3.select('#options')
+  .append('select')
+  	.attr('class','select')
+    .on('change',onchange)
+
+var options = select
+  .selectAll('option')
+	.data(options).enter()
+	.append('option')
+		.text(function (d) { return d; });
+
+function onchange() {
+	selectValue = d3.select('select').property('value')
+	d3.select('body')
+		.append('p')
+		.text(selectValue + ' is the last selected option.')
+};
+
+
+  dot = holder.append("g")
+      .attr("class", "dot")
+    .selectAll("circle")
+      .data(data.teams.Real)
+    .enter()
+    .append("circle")
+      .attr("r", 14)
+      .attr("cx", function(d) { return d.x; })
+      .attr("cy", function(d) { return d.y; })
+      .style("fill", function(d) { return color(d.name); })
+      .style("stroke", function(d) { return color1(d.name); })
+      .call(drag)
+      .on("mouseover", function(d) {
+        var xPosition = scaleh(50 + parseFloat(d3.select(this).attr("cx")));
+			var yPosition = scalev(10 + parseFloat(d3.select(this).attr("cy")));
+      console.log(xPosition)
+      console.log(yPosition)
+
+
+        d3.select("#tooltip")
+            .style("left", xPosition + "px")
+			.style("top", yPosition + "px")
+			.select("#name")
+			  .text(d.name);
+			d3.select("#tooltip") 
+			  .select("#number")
+			  .text(d.Number);
+
+			d3.select("#tooltip").classed("hidden", false);
+
+      })
+      .on("mouseout",function(d){
+        d3.select("#tooltip").classed("hidden", true);
+      })
+
+      console.log(data.teams.Real[0].x)
+      
+});
+
+// functions for above...
+function dottype(d) {
+  d.x = +d.x;
+  d.y = +d.y;
+  return d;
+}
+function dragstarted(d) {
+  d3.event.sourceEvent.stopPropagation();
+  d3.select(this)
+}
+function dragged(d) {
+  d3.select(this)
+  .attr("cx", d.x = d3.event.x)
+  .attr("cy", d.y = d3.event.y)
+  .style("opacity", .5);
+}
+function dragended(d) {
+  d3.select(this)
+  .style("opacity", 1);
+}
+  </script>
+
+</body>
+</html>

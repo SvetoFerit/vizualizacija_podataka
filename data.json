@@ -1,0 +1,37 @@
+{
+    "teams":{
+        "Real":[
+            {"name":"Iker Casillas", "Number":"1", "x":"70", "y":"360", "Position":"GK", "Status":"starting"},
+            {"name":"Marcelo", "Number":"12", "x":"300", "y":"50", "Position":"Defender", "Status":"starting"},
+            {"name":"Sergio Ramos", "Number":"4", "x":"250", "y":"470", "Position":"Defender", "Status":"starting"},
+            {"name":"Pepe", "Number":"3", "x":"250", "y":"260", "Position":"Defender", "Status":"starting"},
+            {"name":"Daniel Carvajal", "Number":"15", "x":"300", "y":"560", "Position":"Defender", "Status":"starting"},
+            {"name":"Isco", "Number":"23", "x":"800", "y":"350", "Position":"Midfielder", "Status":"sub"},
+            {"name":"Asier Illarramendi", "Number":"24", "x":"570", "y":"510", "Position":"Midfielder", "Status":"sub"},    
+            {"name":"Toni Kroos", "Number":"8", "x":"550", "y":"490", "Position":"Midfielder", "Status":"starting"},    
+            {"name":"James Rodríguez", "Number":"10", "x":"670", "y":"70", "Position":"Midfielder", "Status":"starting"},
+            {"name":"Cristiano Ronaldo", "Number":"7", "x":"870", "y":"150", "Position":"Forward", "Status":"starting"},
+            {"name":"Gareth Bale", "Number":"11", "x":"650", "y":"560", "Position":"Forward", "Status":"starting"},
+            {"name":"Luka Modric", "Number":"19", "x":"550", "y":"260", "Position":"Midfielder", "Status":"sub"},
+            {"name":"Benzema", "Number":"9", "x":"900", "y":"570", "Position":"Forward", "Status":"starting"},
+            {"name":"Raphael Varane", "Number":"2", "x":"270", "y":"490", "Position":"Defender", "Status":"starting"}
+        ],
+
+        "Barca":[
+            {"name":"Messi", "Number":"1", "x":"70", "y":"360", "Position":"GK", "Status":"starting"},
+            {"name":"Pyol", "Number":"12", "x":"300", "y":"50", "Position":"Defender", "Status":"starting"},
+            {"name":"Buskec", "Number":"4", "x":"250", "y":"470", "Position":"Defender", "Status":"starting"},
+            {"name":"1", "Number":"3", "x":"250", "y":"260", "Position":"Defender", "Status":"starting"},
+            {"name":"2 Carvajal", "Number":"15", "x":"300", "y":"560", "Position":"Defender", "Status":"starting"},
+            {"name":"3", "Number":"23", "x":"800", "y":"350", "Position":"Midfielder", "Status":"sub"},
+            {"name":"44 Illarramendi", "Number":"24", "x":"570", "y":"510", "Position":"Midfielder", "Status":"sub"},    
+            {"name":"5 Kroos", "Number":"8", "x":"550", "y":"490", "Position":"Midfielder", "Status":"starting"},    
+            {"name":"6 Rodríguez", "Number":"10", "x":"670", "y":"70", "Position":"Midfielder", "Status":"starting"},
+            {"name":"7 Ronaldo", "Number":"7", "x":"870", "y":"150", "Position":"Forward", "Status":"starting"},
+            {"name":"8 Bale", "Number":"11", "x":"650", "y":"560", "Position":"Forward", "Status":"starting"},
+            {"name":"9 Modric", "Number":"19", "x":"550", "y":"260", "Position":"Midfielder", "Status":"sub"},
+            {"name":"Xavi", "Number":"9", "x":"900", "y":"570", "Position":"Forward", "Status":"starting"},
+            {"name":" Nwymar", "Number":"2", "x":"270", "y":"490", "Position":"Defender", "Status":"starting"}
+        ]
+    }
+}

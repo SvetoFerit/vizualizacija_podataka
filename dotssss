@@ -1,0 +1,42 @@
+
+x,y,team,player,name,Number
+47,340,A,1,Iker,1
+321,287,A,6,Marcelo,2
+328,360,A,4,Sergio,3
+431,75,A,23,Pepe,4
+420,544,A,7,Asier,5
+478,320,A,15,Bale,6
+488,245,A,8,Carvajal,7
+513,422,A,24,Daniel,8
+672,517,A,11,Enrike,9
+767,340,A,39,Forward,10
+719,102,A,40,GK,11
+1029,343,B,1,Higuanin,12
+802,290,B,2,Safaga,13
+796,363,B,3,asgasgaa,14
+761,78,B,4,rztz,1
+704,547,B,5,khjl,2
+599,314,B,6,qwe,3
+588,239,B,7,rtz,4
+548,416,B,8,zui,6
+466,511,B,9,hgf,5
+362,335,B,10,sad,7
+473,102,B,11,vbn,8
+525,272,C,1,lkj,9
+
+
+name,Number,x,y,Position,Status
+Iker Casillas,1,70,360,GK,starting
+Marcelo,12,300,50,Defender,starting
+Sergio Ramos,4,250,470,Defender,starting
+Pepe,3,250,260,Defender,starting
+Daniel Carvajal,15,300,660,Defender,starting
+Isco,23,800,350,Midfielder,sub
+Asier Illarramendi,24,570,510,Midfielder,sub
+Toni Kroos,8,550,490,Midfielder,starting
+James Rodríguez,10,670,70,Midfielder,starting
+Cristiano Ronaldo,7,870,150,Forward,starting
+Gareth Bale,11,650,660,Forward,starting
+Luka Modric,19,550,260,Midfielder,sub
+Benzema,9,900,570,Forward,starting
+Raphael Varane,2,270,490,Defender,starting
