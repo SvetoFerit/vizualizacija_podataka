@@ -1,37 +1,277 @@
-{
+﻿{
     "teams":{
-        "Real":[
-            {"name":"Iker Casillas", "Number":"1", "x":"70", "y":"360", "Position":"GK", "Status":"starting"},
-            {"name":"Marcelo", "Number":"12", "x":"300", "y":"50", "Position":"Defender", "Status":"starting"},
-            {"name":"Sergio Ramos", "Number":"4", "x":"250", "y":"470", "Position":"Defender", "Status":"starting"},
-            {"name":"Pepe", "Number":"3", "x":"250", "y":"260", "Position":"Defender", "Status":"starting"},
-            {"name":"Daniel Carvajal", "Number":"15", "x":"300", "y":"560", "Position":"Defender", "Status":"starting"},
-            {"name":"Isco", "Number":"23", "x":"800", "y":"350", "Position":"Midfielder", "Status":"sub"},
-            {"name":"Asier Illarramendi", "Number":"24", "x":"570", "y":"510", "Position":"Midfielder", "Status":"sub"},    
-            {"name":"Toni Kroos", "Number":"8", "x":"550", "y":"490", "Position":"Midfielder", "Status":"starting"},    
-            {"name":"James Rodríguez", "Number":"10", "x":"670", "y":"70", "Position":"Midfielder", "Status":"starting"},
-            {"name":"Cristiano Ronaldo", "Number":"7", "x":"870", "y":"150", "Position":"Forward", "Status":"starting"},
-            {"name":"Gareth Bale", "Number":"11", "x":"650", "y":"560", "Position":"Forward", "Status":"starting"},
-            {"name":"Luka Modric", "Number":"19", "x":"550", "y":"260", "Position":"Midfielder", "Status":"sub"},
-            {"name":"Benzema", "Number":"9", "x":"900", "y":"570", "Position":"Forward", "Status":"starting"},
-            {"name":"Raphael Varane", "Number":"2", "x":"270", "y":"490", "Position":"Defender", "Status":"starting"}
+        "Real Madrid":[
+            {"name":"Keylor Navas", "Number":"1", "x":"23", "y":"253", "Position":"GK"},
+            {"name":"Daniel Carvajal", "Number":"2", "x":"234", "y":"36", "Position":"Defender"},
+            {"name":"Jesus Vallejo", "Number":"3", "x":"195", "y":"322", "Position":"Defender"},
+            {"name":"Sergio Ramos", "Number":"4", "x":"195", "y":"173", "Position":"Defender"},
+            {"name":"Raphael Varane", "Number":"5", "x":"234", "y":"444", "Position":"Defender"},
+            {"name":"Nacho", "Number":"6", "x":"333", "y":"308", "Position":"Midfielder"},
+            {"name":"Mariano Diaz", "Number":"7", "x":"385", "y":"53", "Position":"Midfielder"},    
+            {"name":"Toni Kroos", "Number":"8", "x":"385", "y":"424", "Position":"Midfielder"},    
+            {"name":"Karim Benzema", "Number":"9", "x":"478", "y":"179", "Position":"Midfielder"},
+            {"name":"Luka Modrić", "Number":"10", "x":"333", "y":"155", "Position":"Forward"},
+            {"name":"Gareth Bale", "Number":"11", "x":"479", "y":"320", "Position":"Forward"}
         ],
-
-        "Barca":[
-            {"name":"Messi", "Number":"1", "x":"70", "y":"360", "Position":"GK", "Status":"starting"},
-            {"name":"Pyol", "Number":"12", "x":"300", "y":"50", "Position":"Defender", "Status":"starting"},
-            {"name":"Buskec", "Number":"4", "x":"250", "y":"470", "Position":"Defender", "Status":"starting"},
-            {"name":"1", "Number":"3", "x":"250", "y":"260", "Position":"Defender", "Status":"starting"},
-            {"name":"2 Carvajal", "Number":"15", "x":"300", "y":"560", "Position":"Defender", "Status":"starting"},
-            {"name":"3", "Number":"23", "x":"800", "y":"350", "Position":"Midfielder", "Status":"sub"},
-            {"name":"44 Illarramendi", "Number":"24", "x":"570", "y":"510", "Position":"Midfielder", "Status":"sub"},    
-            {"name":"5 Kroos", "Number":"8", "x":"550", "y":"490", "Position":"Midfielder", "Status":"starting"},    
-            {"name":"6 Rodríguez", "Number":"10", "x":"670", "y":"70", "Position":"Midfielder", "Status":"starting"},
-            {"name":"7 Ronaldo", "Number":"7", "x":"870", "y":"150", "Position":"Forward", "Status":"starting"},
-            {"name":"8 Bale", "Number":"11", "x":"650", "y":"560", "Position":"Forward", "Status":"starting"},
-            {"name":"9 Modric", "Number":"19", "x":"550", "y":"260", "Position":"Midfielder", "Status":"sub"},
-            {"name":"Xavi", "Number":"9", "x":"900", "y":"570", "Position":"Forward", "Status":"starting"},
-            {"name":" Nwymar", "Number":"2", "x":"270", "y":"490", "Position":"Defender", "Status":"starting"}
-        ]
+        "FC Barcelona":[
+            {"name":"Marc-André ter Stegen", "Number":"1", "x":"23", "y":"253", "Position":"GK"},
+            {"name":"Nelson Semedo", "Number":"2", "x":"234", "y":"36", "Position":"Center-Back"},
+            {"name":"Gerard Pique", "Number":"3", "x":"195", "y":"322", "Position":"Defender"},
+            {"name":"Ivan Rakitić", "Number":"4", "x":"195", "y":"173", "Position":"Center-Back"},
+            {"name":"Sergio Busquets", "Number":"5", "x":"234", "y":"444", "Position":"Defender"},
+            {"name":"Jean-Clair Todibo", "Number":"6", "x":"333", "y":"308", "Position":"Midfielder"},
+            {"name":"Philippe Coutinho", "Number":"7", "x":"385", "y":"53", "Position":"Midfielder"},    
+            {"name":"Arthur", "Number":"8", "x":"385", "y":"424", "Position":"Midfielder"},    
+            {"name":"Luis Suarez", "Number":"9", "x":"478", "y":"179", "Position":"Midfielder"},
+            {"name":"Lionel Messi", "Number":"10", "x":"333", "y":"155", "Position":"Forward"},
+            {"name":"Ousmane Dembele", "Number":"11", "x":"479", "y":"320", "Position":"Forward"}
+			]
+        ,
+		"Atlético Madrid":[
+            {"name":"Antonio Adan", "Number":"1", "x":"23", "y":"253", "Position":"GK"},
+            {"name":"Diego Godin", "Number":"2", "x":"234", "y":"36", "Position":"Center-Back"},
+            {"name":"Filipe Luis", "Number":"3", "x":"195", "y":"322", "Position":"Defender"},
+            {"name":"Santiago Arias", "Number":"4", "x":"195", "y":"173", "Position":"Center-Back"},
+            {"name":"Thomas", "Number":"5", "x":"234", "y":"444", "Position":"Defender"},
+            {"name":"Koke", "Number":"6", "x":"333", "y":"308", "Position":"Midfielder"},
+            {"name":"Antoine Griezmann", "Number":"7", "x":"385", "y":"53", "Position":"Midfielder"},    
+            {"name":"Saul Niguez", "Number":"8", "x":"385", "y":"424", "Position":"Midfielder"},    
+            {"name":"Nikola Kalinić", "Number":"9", "x":"478", "y":"179", "Position":"Midfielder"},
+            {"name":"Angel Correa", "Number":"10", "x":"333", "y":"155", "Position":"Forward"},
+            {"name":"Thomas Lemar", "Number":"11", "x":"479", "y":"320", "Position":"Forward"}
+        ],
+		"Valencia CF":[
+            {"name":"Jaume Domenech", "Number":"1", "x":"23", "y":"253", "Position":"GK"},
+            {"name":"Facundo Roncaglia", "Number":"4", "x":"234", "y":"36", "Position":"Center-Back"},
+            {"name":"Gabriel Paulista", "Number":"5", "x":"195", "y":"322", "Position":"Defender"},
+            {"name":"Geoffrey Kondogbia", "Number":"6", "x":"195", "y":"173", "Position":"Center-Back"},
+            {"name":"Goncalo Guedes", "Number":"7", "x":"234", "y":"444", "Position":"Defender"},
+            {"name":"Carlos Soler", "Number":"8", "x":"333", "y":"308", "Position":"Midfielder"},
+            {"name":"Kevin Gameiro", "Number":"9", "x":"385", "y":"53", "Position":"Midfielder"},    
+            {"name":"Dani Parejo", "Number":"10", "x":"385", "y":"424", "Position":"Midfielder"},    
+            {"name":"Denis Cheryshev", "Number":"11", "x":"478", "y":"179", "Position":"Midfielder"},
+            {"name":"Mouctar Diakhaby", "Number":"12", "x":"333", "y":"155", "Position":"Forward"},
+            {"name":"Kang-in Lee", "Number":"16", "x":"479", "y":"320", "Position":"Forward"}
+        ],
+		"Sevilla FC":[
+            {"name":"Tomas Vaclik", "Number":"1", "x":"23", "y":"253", "Position":"GK"},
+            {"name":"Sergio Gomez", "Number":"3", "x":"234", "y":"36", "Position":"Center-Back"},
+            {"name":"Simon Kjaer", "Number":"4", "x":"195", "y":"322", "Position":"Defender"},
+            {"name":"Ibrahim Amadou", "Number":"5", "x":"195", "y":"173", "Position":"Center-Back"},
+            {"name":"Daniel Carrico", "Number":"6", "x":"234", "y":"444", "Position":"Defender"},
+            {"name":"Roque Mesa", "Number":"7", "x":"333", "y":"308", "Position":"Midfielder"},
+            {"name":"Nolito", "Number":"8", "x":"385", "y":"53", "Position":"Midfielder"},    
+            {"name":"Wissam Ben Yedder", "Number":"9", "x":"385", "y":"424", "Position":"Midfielder"},    
+            {"name":"Ever Banega", "Number":"10", "x":"478", "y":"179", "Position":"Midfielder"},
+            {"name":"Aleix Vidal", "Number":"11", "x":"333", "y":"155", "Position":"Forward"},
+            {"name":"Andre Silva", "Number":"12", "x":"479", "y":"320", "Position":"Forward"}
+        ],
+		"Real Betis Balompié":[
+            {"name":"Joel Robles", "Number":"1", "x":"23", "y":"253", "Position":"GK"},
+            {"name":"Francis Guerrero", "Number":"2", "x":"234", "y":"36", "Position":"Center-Back"},
+            {"name":"Javi Garcia", "Number":"3", "x":"195", "y":"322", "Position":"Defender"},
+            {"name":"Zouhair Feddal", "Number":"4", "x":"195", "y":"173", "Position":"Center-Back"},
+            {"name":"Marc Bartra", "Number":"5", "x":"234", "y":"444", "Position":"Defender"},
+            {"name":"Sergio Canales", "Number":"6", "x":"333", "y":"308", "Position":"Midfielder"},
+            {"name":"Sergio Leon", "Number":"7", "x":"385", "y":"53", "Position":"Midfielder"},    
+            {"name":"Jese", "Number":"10", "x":"385", "y":"424", "Position":"Midfielder"},    
+            {"name":"Cristian Tello", "Number":"11", "x":"478", "y":"179", "Position":"Midfielder"},
+            {"name":"Sidnei", "Number":"12", "x":"333", "y":"155", "Position":"Forward"},
+            {"name":"Joaguin", "Number":"17", "x":"479", "y":"320", "Position":"Forward"}
+        ],
+		"Real Sociedad":[
+            {"name":"Geronimo Rulli", "Number":"1", "x":"23", "y":"253", "Position":"GK"},
+            {"name":"Joseba Zaldua", "Number":"2", "x":"234", "y":"36", "Position":"Center-Back"},
+            {"name":"Diego Llorente", "Number":"3", "x":"195", "y":"322", "Position":"Defender"},
+            {"name":"Asier Illarramendi", "Number":"4", "x":"195", "y":"173", "Position":"Center-Back"},
+            {"name":"Igor Zubeldia", "Number":"5", "x":"234", "y":"444", "Position":"Defender"},
+            {"name":"Hector Moreno", "Number":"6", "x":"333", "y":"308", "Position":"Midfielder"},
+            {"name":"Juanmi", "Number":"7", "x":"385", "y":"53", "Position":"Midfielder"},    
+            {"name":"Mikel Merino", "Number":"8", "x":"385", "y":"424", "Position":"Midfielder"},    
+            {"name":"Mikel Oyarzabal", "Number":"10", "x":"478", "y":"179", "Position":"Midfielder"},
+            {"name":"Adnan Januzaj", "Number":"11", "x":"333", "y":"155", "Position":"Forward"},
+            {"name":"Willian Jose", "Number":"12", "x":"479", "y":"320", "Position":"Forward"}
+        ],
+		 "Celta de Vigo":[
+            {"name":"Sergio Alvarez", "Number":"1", "x":"23", "y":"253", "Position":"GK"},
+            {"name":"Hugo Mallo", "Number":"2", "x":"234", "y":"36", "Position":"Center-Back"},
+            {"name":"David Costas", "Number":"3", "x":"195", "y":"322", "Position":"Defender"},
+            {"name":"Nestor Araujo", "Number":"4", "x":"195", "y":"173", "Position":"Center-Back"},
+            {"name":"Okay Yokuslu", "Number":"5", "x":"234", "y":"444", "Position":"Defender"},
+            {"name":"Nemanja Radoja", "Number":"6", "x":"333", "y":"308", "Position":"Midfielder"},
+            {"name":"Emre Mor", "Number":"7", "x":"385", "y":"53", "Position":"Midfielder"},    
+            {"name":"Fran Beltran", "Number":"8", "x":"385", "y":"424", "Position":"Midfielder"},    
+            {"name":"Maximiliano Gomez", "Number":"9", "x":"478", "y":"179", "Position":"Midfielder"},
+            {"name":"Iago Aspas", "Number":"10", "x":"333", "y":"155", "Position":"Forward"},
+            {"name":"Pione Sisto", "Number":"11", "x":"479", "y":"320", "Position":"Forward"}
+			]
+        ,
+		 "Athletic Bilbao":[
+            {"name":"Alex Remiro", "Number":"1", "x":"23", "y":"253", "Position":"GK"},
+            {"name":"Kenan Kodro", "Number":"2", "x":"234", "y":"36", "Position":"Center-Back"},
+            {"name":"Unai Nunez", "Number":"3", "x":"195", "y":"322", "Position":"Defender"},
+            {"name":"Inigo Martinez", "Number":"4", "x":"195", "y":"173", "Position":"Center-Back"},
+            {"name":"Yeray Alvarez", "Number":"5", "x":"234", "y":"444", "Position":"Defender"},
+            {"name":"Mikel San Jose", "Number":"6", "x":"333", "y":"308", "Position":"Midfielder"},
+            {"name":"Benat Etxebarria", "Number":"7", "x":"385", "y":"53", "Position":"Midfielder"},    
+            {"name":"Ander Iturraspe", "Number":"8", "x":"385", "y":"424", "Position":"Midfielder"},    
+            {"name":"Inaki Williams", "Number":"9", "x":"478", "y":"179", "Position":"Midfielder"},
+            {"name":"Iker Munian", "Number":"10", "x":"333", "y":"155", "Position":"Forward"},
+            {"name":"Inigo Cordoba", "Number":"11", "x":"479", "y":"320", "Position":"Forward"}
+			]
+        ,
+		 "Villarreal CF":[
+            {"name":"Sergio Asenjo", "Number":"1", "x":"23", "y":"253", "Position":"GK"},
+            {"name":"Mario Gaspar", "Number":"2", "x":"234", "y":"36", "Position":"Center-Back"},
+            {"name":"Alvaro Gonzalez", "Number":"3", "x":"195", "y":"322", "Position":"Defender"},
+            {"name":"Ramiro Funes Mori", "Number":"4", "x":"195", "y":"173", "Position":"Center-Back"},
+            {"name":"Santiago Caseres", "Number":"5", "x":"234", "y":"444", "Position":"Defender"},
+            {"name":"Victor Ruiz", "Number":"6", "x":"333", "y":"308", "Position":"Midfielder"},
+            {"name":"Gerard Moreno", "Number":"7", "x":"385", "y":"53", "Position":"Midfielder"},    
+            {"name":"Pablo Fornals", "Number":"8", "x":"385", "y":"424", "Position":"Midfielder"},    
+            {"name":"Carlos Bacca", "Number":"9", "x":"478", "y":"179", "Position":"Midfielder"},
+            {"name":"Vicente Iborra", "Number":"10", "x":"333", "y":"155", "Position":"Forward"},
+            {"name":"Jaume Costa", "Number":"11", "x":"479", "y":"320", "Position":"Forward"}
+			]
+        ,
+		 "RCD Espanyol Barcelona":[
+            {"name":"Roberto", "Number":"1", "x":"23", "y":"253", "Position":"GK"},
+            {"name":"Alfa Semedo", "Number":"2", "x":"234", "y":"36", "Position":"Center-Back"},
+            {"name":"Victor Sanchez", "Number":"4", "x":"195", "y":"322", "Position":"Defender"},
+            {"name":"Naldo", "Number":"5", "x":"195", "y":"173", "Position":"Center-Back"},
+            {"name":"Oscar Duarte", "Number":"6", "x":"234", "y":"444", "Position":"Defender"},
+            {"name":"Borja Iglesias", "Number":"7", "x":"333", "y":"308", "Position":"Midfielder"},
+            {"name":"Roberto Rosales", "Number":"8", "x":"385", "y":"53", "Position":"Midfielder"},    
+            {"name":"Sergio Garcia", "Number":"9", "x":"385", "y":"424", "Position":"Midfielder"},    
+            {"name":"Sergi Darder", "Number":"10", "x":"478", "y":"179", "Position":"Midfielder"},
+            {"name":"Facundo Ferreyra", "Number":"11", "x":"333", "y":"155", "Position":"Forward"},
+            {"name":"Didac Vila", "Number":"12", "x":"479", "y":"320", "Position":"Forward"}
+			]
+        ,
+		 "Girona FC":[
+            {"name":"Gorka Iraizoz", "Number":"1", "x":"23", "y":"253", "Position":"GK"},
+            {"name":"Bernardo Espinosa", "Number":"2", "x":"234", "y":"36", "Position":"Center-Back"},
+            {"name":"Johan Mojica", "Number":"3", "x":"195", "y":"322", "Position":"Defender"},
+            {"name":"Jonas Ramalho", "Number":"4", "x":"195", "y":"173", "Position":"Center-Back"},
+            {"name":"Perdo Alcala", "Number":"5", "x":"234", "y":"444", "Position":"Defender"},
+            {"name":"Alex Granell", "Number":"6", "x":"333", "y":"308", "Position":"Midfielder"},
+            {"name":"Cristhian Stuani", "Number":"7", "x":"385", "y":"53", "Position":"Midfielder"},    
+            {"name":"Pere Pons", "Number":"8", "x":"385", "y":"424", "Position":"Midfielder"},    
+            {"name":"Portu", "Number":"9", "x":"478", "y":"179", "Position":"Midfielder"},
+            {"name":"Borja Garcia", "Number":"10", "x":"333", "y":"155", "Position":"Forward"},
+            {"name":"Aday", "Number":"11", "x":"479", "y":"320", "Position":"Forward"}
+			]
+        ,
+		 "CD Leganés":[
+            {"name":"Ivan Cuellar", "Number":"1", "x":"23", "y":"253", "Position":"GK"},
+            {"name":"Juanfran", "Number":"2", "x":"234", "y":"36", "Position":"Center-Back"},
+            {"name":"Unai Bustinza", "Number":"3", "x":"195", "y":"322", "Position":"Defender"},
+            {"name":"Diego Reyes", "Number":"4", "x":"195", "y":"173", "Position":"Center-Back"},
+            {"name":"Jonathan Silva", "Number":"5", "x":"234", "y":"444", "Position":"Defender"},
+            {"name":"Gerard Gumbau", "Number":"6", "x":"333", "y":"308", "Position":"Midfielder"},
+            {"name":"Recio", "Number":"8", "x":"385", "y":"53", "Position":"Midfielder"},    
+            {"name":"Guido Carrillo", "Number":"9", "x":"385", "y":"424", "Position":"Midfielder"},    
+            {"name":"Nabil El Zhar", "Number":"10", "x":"478", "y":"179", "Position":"Midfielder"},
+            {"name":"Alexander Szymanowski", "Number":"11", "x":"333", "y":"155", "Position":"Forward"},
+            {"name":"Allan Nyom", "Number":"12", "x":"479", "y":"320", "Position":"Forward"}
+			]
+        ,
+		 "Getafe CF":[
+            {"name":"Leonardo Chichizola", "Number":"1", "x":"23", "y":"253", "Position":"GK"},
+            {"name":"Djene", "Number":"2", "x":"234", "y":"36", "Position":"Center-Back"},
+            {"name":"Victorino Antunes", "Number":"3", "x":"195", "y":"322", "Position":"Defender"},
+            {"name":"Bruno Gonzalez", "Number":"4", "x":"195", "y":"173", "Position":"Center-Back"},
+            {"name":"Markel Bergara", "Number":"5", "x":"234", "y":"444", "Position":"Defender"},
+            {"name":"Leandro Cabrera", "Number":"6", "x":"333", "y":"308", "Position":"Midfielder"},
+            {"name":"Jaime Mata", "Number":"7", "x":"385", "y":"53", "Position":"Midfielder"},    
+            {"name":"Francisco Portillo", "Number":"8", "x":"385", "y":"424", "Position":"Midfielder"},    
+            {"name":"Angel Rodriguez", "Number":"9", "x":"478", "y":"179", "Position":"Midfielder"},
+            {"name":"Gaku Shibasaki", "Number":"10", "x":"333", "y":"155", "Position":"Forward"},
+            {"name":"Samu Saiz", "Number":"11", "x":"479", "y":"320", "Position":"Forward"}
+			]
+        ,
+		 "Deportivo Alavés":[
+            {"name":"Fernando Pacheco", "Number":"1", "x":"23", "y":"253", "Position":"GK"},
+            {"name":"Carlos Vigaray", "Number":"2", "x":"234", "y":"36", "Position":"Center-Back"},
+            {"name":"Ruben Duarte", "Number":"3", "x":"195", "y":"322", "Position":"Defender"},
+            {"name":"Rodrigo Ely", "Number":"4", "x":"195", "y":"173", "Position":"Center-Back"},
+            {"name":"Victor Laguardia", "Number":"5", "x":"234", "y":"444", "Position":"Defender"},
+            {"name":"Guillermo Maripan", "Number":"6", "x":"333", "y":"308", "Position":"Midfielder"},
+            {"name":"Alex Blanco", "Number":"7", "x":"385", "y":"53", "Position":"Midfielder"},    
+            {"name":"Tomas Pina", "Number":"8", "x":"385", "y":"424", "Position":"Midfielder"},    
+            {"name":"Diego Rolan", "Number":"9", "x":"478", "y":"179", "Position":"Midfielder"},
+            {"name":"John Guidetti", "Number":"10", "x":"333", "y":"155", "Position":"Forward"},
+            {"name":"Jonathan Calleri", "Number":"11", "x":"479", "y":"320", "Position":"Forward"}
+			]
+        ,
+		"Levante UD":[
+            {"name":"Koke", "Number":"1", "x":"23", "y":"253", "Position":"GK"},
+            {"name":"Borja Mayoral", "Number":"2", "x":"234", "y":"36", "Position":"Center-Back"},
+            {"name":"Tono", "Number":"3", "x":"195", "y":"322", "Position":"Defender"},
+            {"name":"Rober Pier", "Number":"4", "x":"195", "y":"173", "Position":"Center-Back"},
+            {"name":"Cheick Doukoure", "Number":"5", "x":"234", "y":"444", "Position":"Defender"},
+            {"name":"Chema", "Number":"6", "x":"333", "y":"308", "Position":"Midfielder"},
+            {"name":"Moses Simon", "Number":"7", "x":"385", "y":"53", "Position":"Midfielder"},    
+            {"name":"roger Marti", "Number":"9", "x":"385", "y":"424", "Position":"Midfielder"},    
+            {"name":"Enis Bardhi", "Number":"10", "x":"478", "y":"179", "Position":"Midfielder"},
+            {"name":"Jose Luis Morales", "Number":"11", "x":"333", "y":"155", "Position":"Forward"},
+            {"name":"Coke", "Number":"12", "x":"479", "y":"320", "Position":"Forward"}
+			]
+        ,
+		"SD Eibar":[
+            {"name":"Marko Dmitrovic", "Number":"1", "x":"23", "y":"253", "Position":"GK"},
+            {"name":"Jordi Calavera", "Number":"2", "x":"234", "y":"36", "Position":"Center-Back"},
+            {"name":"Pedro Bigas", "Number":"3", "x":"195", "y":"322", "Position":"Defender"},
+            {"name":"Ivan Ramis", "Number":"4", "x":"195", "y":"173", "Position":"Center-Back"},
+            {"name":"Gonzalo Escalante", "Number":"5", "x":"234", "y":"444", "Position":"Defender"},
+            {"name":"Sergio Alvarez", "Number":"6", "x":"333", "y":"308", "Position":"Midfielder"},
+            {"name":"Marc Cardona", "Number":"7", "x":"385", "y":"53", "Position":"Midfielder"},    
+            {"name":"Pape Diop", "Number":"8", "x":"385", "y":"424", "Position":"Midfielder"},    
+            {"name":"Sergi Enrich", "Number":"9", "x":"478", "y":"179", "Position":"Midfielder"},
+            {"name":"Ruben Pena", "Number":"11", "x":"333", "y":"155", "Position":"Forward"},
+            {"name":"Paulo Oliveira", "Number":"12", "x":"479", "y":"320", "Position":"Forward"}
+			]
+        ,
+		"Rayo Vallecano":[
+            {"name":"Alberto Garcia", "Number":"1", "x":"23", "y":"253", "Position":"GK"},
+            {"name":"Tito", "Number":"2", "x":"234", "y":"36", "Position":"Center-Back"},
+            {"name":"Uche Agbo", "Number":"3", "x":"195", "y":"322", "Position":"Defender"},
+            {"name":"Alvaro Medran", "Number":"4", "x":"195", "y":"173", "Position":"Center-Back"},
+            {"name":"Alejandro Catena", "Number":"5", "x":"234", "y":"444", "Position":"Defender"},
+            {"name":"Gorka Elustondo", "Number":"6", "x":"333", "y":"308", "Position":"Midfielder"},
+            {"name":"Alex Moreno", "Number":"7", "x":"385", "y":"53", "Position":"Midfielder"},    
+            {"name":"Oscar Trejo", "Number":"8", "x":"385", "y":"424", "Position":"Midfielder"},    
+            {"name":"Raul de Tomas", "Number":"9", "x":"478", "y":"179", "Position":"Midfielder"},
+            {"name":"Gael Kakuta", "Number":"10", "x":"333", "y":"155", "Position":"Forward"},
+            {"name":"Adrian Embarba", "Number":"11", "x":"479", "y":"320", "Position":"Forward"}
+			]
+        ,
+		"Real Valladolid CF":[
+            {"name":"Jordi Masip", "Number":"1", "x":"23", "y":"253", "Position":"GK"},
+            {"name":"Joaquin Fernandez", "Number":"2", "x":"234", "y":"36", "Position":"Center-Back"},
+            {"name":"Moises Delgado", "Number":"3", "x":"195", "y":"322", "Position":"Defender"},
+            {"name":"Kiko Olivas", "Number":"4", "x":"195", "y":"173", "Position":"Center-Back"},
+            {"name":"Fernando Calero", "Number":"5", "x":"234", "y":"444", "Position":"Defender"},
+            {"name":"Luismi", "Number":"6", "x":"333", "y":"308", "Position":"Midfielder"},
+            {"name":"Waldo Rubio", "Number":"7", "x":"385", "y":"53", "Position":"Midfielder"},    
+            {"name":"Borja Fernandez", "Number":"8", "x":"385", "y":"424", "Position":"Midfielder"},    
+            {"name":"Enes Unal", "Number":"9", "x":"478", "y":"179", "Position":"Midfielder"},
+            {"name":"Oscar Plano", "Number":"10", "x":"333", "y":"155", "Position":"Forward"},
+            {"name":"Daniele Verde", "Number":"11", "x":"479", "y":"320", "Position":"Forward"}
+			]
+        ,
+		"SD Huesca":[
+            {"name":"Javi Varas", "Number":"1", "x":"23", "y":"253", "Position":"GK"},
+            {"name":"Martin Mantovani", "Number":"2", "x":"234", "y":"36", "Position":"Center-Back"},
+            {"name":"Xabier Etxeita", "Number":"3", "x":"195", "y":"322", "Position":"Defender"},
+            {"name":"Adrian Dieguez", "Number":"4", "x":"195", "y":"173", "Position":"Center-Back"},
+            {"name":"Juan Aguilera", "Number":"5", "x":"234", "y":"444", "Position":"Defender"},
+            {"name":"Moi Gomez", "Number":"6", "x":"333", "y":"308", "Position":"Midfielder"},
+            {"name":"David Ferreiro", "Number":"7", "x":"385", "y":"53", "Position":"Midfielder"},    
+            {"name":"Gonzalo Melero", "Number":"8", "x":"385", "y":"424", "Position":"Midfielder"},    
+            {"name":"Cucho Hernandez", "Number":"9", "x":"478", "y":"179", "Position":"Midfielder"},
+            {"name":"Juanjo Camacho", "Number":"10", "x":"333", "y":"155", "Position":"Forward"},
+            {"name":"Alex Gallar", "Number":"11", "x":"479", "y":"320", "Position":"Forward"}
+			]
     }
 }

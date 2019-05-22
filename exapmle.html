@@ -167,7 +167,7 @@ d3.json("data.json", function(error, data) {
 
 
   var options=["Real","Barca","Juve"]
-  var selected="Real"
+  var selected="Real Madrid"
 
   dot = holder.append("g")
       .attr("class", "dot")
@@ -199,11 +199,6 @@ d3.json("data.json", function(error, data) {
       .on("mouseout",function(d){
         d3.select("#tooltip").classed("hidden", true);
       })
-
-      console.log(data.teams[selected])
-       console.log(dot)
-
-  console.log(selected)
 
   var select = d3.select('#options')
   .append('select')

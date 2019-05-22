@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tactics Board</title>
+    <title>Nogomet (LaLiga)</title>
     <meta charset="utf-8" />
 
  <script src="http://d3js.org/d3.v3.js"></script>
@@ -11,10 +11,12 @@
 
 
 <style>
+
+
 #tooltip {
-        position: absolute;
+       position:absolute;
         margin-left: 500px;
-  margin-top:100px;
+  margin-top:100px; 
         width: 150px;
         height: auto;
         padding: 5px;
@@ -45,9 +47,54 @@
 }
 
 #field{
-  margin-left: 500px;
-  margin-top:100px;
 
+  display:flex;
+ width: auto;
+  border: 3px solid #73AD21;
+
+}
+
+.ground{
+  position:absolute;
+  top:210px;
+  left:400px;
+  
+
+
+}
+#btn{
+display: block;
+
+}
+button{
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  width: 300px;;
+  display: block;
+  text-decoration: none;
+  border: 2px solid blue;
+}
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#clubName{
+  position:relative;
+  left:450px;
+  width:500px; 
+  /* To adjust the height as well */ 
+  height: 50px;;
 }
 
 </style>
@@ -56,15 +103,20 @@
 
 
 <body>   
-  <div id="options" style="margin-bottom: 50px"></div> 
-    <div id="tooltip" class="hidden">
-        <p><strong>Player Detail</strong></p>
-        <p>Name: <span id="name">100</span></p>
-		<p>Number: <span id="number">100</span></p>
-		<p>Position: <span id="pos">100</span></p>
-</div>
 
-<div id="field"></div>
+  
+<div id="field">
+  
+  <div id="btn"></div>
+  <h1 id="clubName">TEAM</h1>
+
+</div>
+<div id="tooltip" class="hidden">
+  <p><strong>Player Detail</strong></p>
+  <p>Name: <span id="name">100</span></p>
+<p>Number: <span id="number">100</span></p>
+<p>Position: <span id="pos">100</span></p>
+</div>
 
 <script type="text/javascript">
 var scaleh = d3.scale.linear();
@@ -75,7 +127,9 @@ var width = 1150,height = 720;
 var holder = d3.select("#field") // select the 'body' element
       .append("svg")           // append an SVG element to the body
       .attr("width", 1000)      
-      .attr("height", 600)         // position the left of the rectangle
+      .attr("height", 600) 
+      .attr("class", "ground")
+              // position the left of the rectangle
   
 // draw a rectangle - pitch
 holder.append("rect")        // attach a rectangle
@@ -182,7 +236,6 @@ var arc2 = d3.svg.arc()
     .attr("transform", "translate(880,250)");
 // Dragging circles
 var color = d3.scale.ordinal().range(["maroon", "pink"]);
-var color1 = d3.scale.ordinal().range(["mediumturquoise", "red"]);
 //var color = d3.scale.category10();
 var drag = d3.behavior.drag()
     .origin(function(d) { return d; })
@@ -198,39 +251,24 @@ var drag = d3.behavior.drag()
 
 
 d3.json("data.json", function(error, data) {
-  var options=d3.values(data);
-  console.log(options)
 
-  var select = d3.select('#options')
-  .append('select')
-  	.attr('class','select')
-    .on('change',onchange)
 
-var options = select
-  .selectAll('option')
-	.data(options).enter()
-	.append('option')
-		.text(function (d) { return d; });
 
-function onchange() {
-	selectValue = d3.select('select').property('value')
-	d3.select('body')
-		.append('p')
-		.text(selectValue + ' is the last selected option.')
-};
-
+  var options=["Real Madrid","FC Barcelona","Atlético Madrid","Valencia CF","Sevilla FC","Real Betis Balompié","Real Sociedad","Celta de Vigo","Athletic Bilbao","Villarreal CF","RCD Espanyol Barcelona","Girona FC","CD Leganés","Getafe CF","Deportivo Alavés","Levante UD","SD Eibar","Rayo Vallecano","Real Valladolid CF","SD Huesca"]
+  var selected="Real Madrid"
 
   dot = holder.append("g")
       .attr("class", "dot")
     .selectAll("circle")
-      .data(data.teams.Real)
+      .data(data.teams[selected])
     .enter()
     .append("circle")
+    .attr('class','player')
       .attr("r", 14)
       .attr("cx", function(d) { return d.x; })
       .attr("cy", function(d) { return d.y; })
-      .style("fill", function(d) { return color(d.name); })
-      .style("stroke", function(d) { return color1(d.name); })
+      .style("fill", "pink")
+      .style("stroke","maroon")
       .call(drag)
       .on("mouseover", function(d) {
         var xPosition = scaleh(50 + parseFloat(d3.select(this).attr("cx")));
@@ -240,13 +278,18 @@ function onchange() {
 
 
         d3.select("#tooltip")
-            .style("left", xPosition + "px")
-			.style("top", yPosition + "px")
+            .style("left", d.x + "px")
+			.style("top", d.y + "px")
 			.select("#name")
 			  .text(d.name);
 			d3.select("#tooltip") 
 			  .select("#number")
 			  .text(d.Number);
+
+        d3.select("#tooltip") 
+			  .select("#pos")
+			  .text(d.Position);
+
 
 			d3.select("#tooltip").classed("hidden", false);
 
@@ -255,9 +298,61 @@ function onchange() {
         d3.select("#tooltip").classed("hidden", true);
       })
 
-      console.log(data.teams.Real[0].x)
-      
+//   var select = d3.select('#options')
+//   .append('select')
+//   	.attr('class','select')
+//     .on('change',onchange)
+
+// var options = select
+//   .selectAll('option')
+// 	.data(options).enter()
+// 	.append('option')
+// 		.text(function (d) { return d; });
+
+ d3.select("#btn").selectAll("button")
+ .data(options)
+    .enter()
+ .append("button")
+ .html(String)
+    .on('click',onclick)
+
+	// d3.select('#ul').selectAll('li')
+	// .data(options)
+	// .enter()
+	// .append('li')
+	// .html(String)
+  // .on('click',onclick)
+
+
+    function onclick() {
+	selected = d3.select(this).property("outerText")
+  d3.select("#clubName").text(selected)
+  console.log(selected)
+  console.log("hi")
+  d3.selectAll(".player")
+  .data(data.teams[selected])
+  .enter().select("circle")
+  .on("mouseover", function(d) {
+        d3.select("#tooltip")
+			  .select("#name")
+			  .text(d.name);
+			d3.select("#tooltip") 
+			  .select("#number")
+			  .text(d.Number);
+
+        d3.select("#tooltip") 
+			  .select("#pos")
+			  .text(d.Position);
+
+			d3.select("#tooltip").classed("hidden", false);
+
+      })
+      .on("mouseout",function(d){
+        d3.select("#tooltip").classed("hidden", true);
+      })
+}
 });
+
 
 // functions for above...
 function dottype(d) {
